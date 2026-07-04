@@ -52,6 +52,13 @@ git add HANDWRITTEN_REFERENCE_INDEX.md CLAIM_REFERENCE_MAP.md NOTATION_CONFLICTS
 git commit -m "Map lecture claims to references"
 ```
 
+Codex 提案参考文献:
+
+```sh
+git add CODEX_REFERENCE_CANDIDATES.md CLAIM_REFERENCE_MAP.md NOTATION_CONFLICTS.md SOURCE_GAPS.md references/REFERENCE_INDEX.md references/notes/
+git commit -m "Record Codex proposed reference candidates"
+```
+
 本文整理:
 
 ```sh

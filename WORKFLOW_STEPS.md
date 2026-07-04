@@ -11,6 +11,7 @@
    - 資料台帳更新
    - 手書きノート確認
    - 参考文献候補抽出
+   - Codex 参考文献提案
    - 主張と参考文献の対応付け
    - 本文整理
    - LaTeX 整形
@@ -19,6 +20,8 @@
 3. 型に応じて読むファイルを最小化する。
 4. 未コミット変更がある場合は，変更元と作業範囲を確認し，無関係な変更を壊さない。
 5. プロジェクト固有の前提は `PROJECT_PROFILE.md` で確認する。
+6. ユーザーが `sources/` または `references/` に入れた資料は，未登録なら `SOURCE_INDEX.md` または `references/REFERENCE_INDEX.md` に登録し，対象範囲に関係する資料として積極的に確認する。
+7. 集中講義記録では，日程，講義回，話題ブロックの順序を本文構成の基準にし，教科書風の章立てへ勝手に再編成しない。
 
 ## 1. 常に読む
 
@@ -38,14 +41,15 @@
 8. `SOURCE_INDEX.md`
 9. `SESSION_INDEX.md`
 10. `HANDWRITTEN_REFERENCE_INDEX.md`
-11. `CLAIM_REFERENCE_MAP.md`
-12. `NOTATION_CONFLICTS.md`
-13. `SOURCE_GAPS.md`
-14. `references/README.md`
-15. `references/REFERENCE_INDEX.md`
-16. `references/notes/README.md`
-17. 用語に関わる場合は `TERM_DICTIONARY.md` と `TERM_DICTIONARY_CANDIDATES.md`
-18. 修正文候補に関わる場合は `REVISION_CANDIDATES.md`
+11. `CODEX_REFERENCE_CANDIDATES.md`
+12. `CLAIM_REFERENCE_MAP.md`
+13. `NOTATION_CONFLICTS.md`
+14. `SOURCE_GAPS.md`
+15. `references/README.md`
+16. `references/REFERENCE_INDEX.md`
+17. `references/notes/README.md`
+18. 用語に関わる場合は `TERM_DICTIONARY.md` と `TERM_DICTIONARY_CANDIDATES.md`
+19. 修正文候補に関わる場合は `REVISION_CANDIDATES.md`
 
 方針を改訂するときは，関連方針全体を横断的に読み直し，重複，長文化，役割分担の不明瞭さ，判断順の曖昧さ，停止条件の不足を洗い出す。
 
@@ -61,6 +65,8 @@
 6. `HANDWRITTEN_REFERENCE_INDEX.md`
 7. `SOURCE_GAPS.md`
 
+ユーザーが追加した未登録資料が見つかった場合は，内容を推測せず，資料種別，ファイル名，対象範囲，確認状態を台帳に記録してから使う。
+
 ### 参考文献候補抽出
 
 1. `REFERENCE_CITATION_POLICY.md`
@@ -72,26 +78,48 @@
 7. `SOURCE_GAPS.md`
 
 まず手書きノートから，文献名，著者名，URL，arXiv 番号，DOI，Stacks tag，MathOverflow/Math StackExchange 番号，定理番号，命題番号，節番号，ページ番号，略記，色付き矢印，引き出し線を拾う。
-一般検索へ進む前に，スライド，配布資料，板書写真，既存台帳と照合する。
+次に配布資料の参考文献，注釈，URL，定理番号を確認する。
+一般検索へ進む前に，スライド，板書写真，既存台帳と照合する。
+ユーザーが `references/pdfs/` に入れた PDF や `sources/` に入れた資料に参考文献情報が含まれる場合は，講義由来の資料として優先的に確認する。
+
+### Codex 参考文献提案
+
+1. `REFERENCE_CITATION_POLICY.md`
+2. `CODEX_REFERENCE_CANDIDATES.md`
+3. `HANDWRITTEN_REFERENCE_INDEX.md`
+4. `CLAIM_REFERENCE_MAP.md`
+5. `SOURCE_GAPS.md`
+6. `NOTATION_CONFLICTS.md`
+7. `references/REFERENCE_INDEX.md`
+8. `references/notes/README.md`
+9. 必要な公開 URL または参考文献 PDF
+
+Codex が講義資料の外から参考文献を提案するのは，手書きノート，板書，スライド，配布資料，既存台帳を確認した後に限る。
+提案理由は，引用未特定，記号衝突，標準出典確認，書誌情報確認，URL 補完，補足引用のいずれかとして `CODEX_REFERENCE_CANDIDATES.md` に記録する。
+Codex 提案参考文献は，講義中に実際に参照された文献として扱わない。
+採用する場合も，証明補完のためではなく，引用箇所の特定，主張対応，記号衝突確認，書誌情報確認，または一般的に飛ばされている背景の補足引用のために使う。
 
 ### 主張と参考文献の対応付け
 
 1. `REFERENCE_CITATION_POLICY.md`
 2. `CLAIM_REFERENCE_MAP.md`
 3. `HANDWRITTEN_REFERENCE_INDEX.md`
-4. `SOURCE_INDEX.md`
-5. `SESSION_INDEX.md`
-6. 対象の手書きノート
-7. 対象の板書写真，スライド，配布資料
-8. `references/README.md`
-9. `references/REFERENCE_INDEX.md`
-10. `references/notes/README.md`
-11. 必要な参考文献 PDF または公開 URL
-12. `NOTATION_CONFLICTS.md`
-13. `SOURCE_GAPS.md`
+4. `CODEX_REFERENCE_CANDIDATES.md`
+5. `SOURCE_INDEX.md`
+6. `SESSION_INDEX.md`
+7. 対象の手書きノート
+8. 対象の板書写真，スライド，配布資料
+9. `references/README.md`
+10. `references/REFERENCE_INDEX.md`
+11. `references/notes/README.md`
+12. 必要な参考文献 PDF または公開 URL
+13. `NOTATION_CONFLICTS.md`
+14. `SOURCE_GAPS.md`
 
 講義中に示された定義，命題，補題，定理，主張，例，注意を一覧化し，対応する参考文献の定理番号，命題番号，節番号，ページ，URL を確認する。
 対応は完全一致，記号違いだが内容一致，仮定が一部違う，結論が類似，関連箇所だが対応未確定，未発見に分類する。
+手書きノートまたは配布資料に対応する文献候補がある場合は，それを最優先で確認する。
+一般的に飛ばされている背景を確認するための文献は，主引用ではなく補足引用として分類する。
 
 ### 本文整理
 
@@ -114,11 +142,13 @@
 
 ## 4. 作業単位
 
-1. 単発講演では，1 つの話題ブロックを対象にする。
-2. 集中講義では，1 つの講義回の中の 1 つの話題ブロックを対象にする。
+1. 集中講義では，1 つの講義回の中の 1 つの話題ブロックを対象にする。
+2. 単発講演では，1 つの話題ブロックを対象にする。
 3. 話題ブロックの粒度は `SESSION_INDEX.md` に従う。
 4. 広い範囲を依頼された場合でも，まず話題ブロック一覧を作り，資料確認，参考文献候補抽出，主張対応，本文整理をブロックごとに行う。
 5. 話題ブロックをまたぐ記号衝突や参考文献対応は，本文へ混ぜる前に `NOTATION_CONFLICTS.md` または `CLAIM_REFERENCE_MAP.md` に記録する。
+6. ユーザー投入資料が多い場合は，無視せず，話題ブロックごとの対応範囲と確認優先度を `SESSION_INDEX.md` または `SOURCE_INDEX.md` に整理する。
+7. 講義回をまたぐ概念整理や再配置が必要に見える場合でも，本文の主構成は日程・講義回順に保ち，横断的な整理は台帳または短い注に留める。
 
 ## 5. 証明補完禁止
 
@@ -128,7 +158,9 @@
 2. 参考文献に証明が載っていても，講義記録の不足部分を補う目的で本文へ展開しない。
 3. 講義中の証明スケッチ，キーワード，図式，引用先は記録として整理してよい。
 4. 参考文献は，対応箇所と引用情報を確認するために使う。
-5. 証明を補った方がよさそうな場合でも，本文へ直接入れず `REVISION_CANDIDATES.md` または `SOURCE_GAPS.md` に「補完禁止のため未反映」として残す。
+5. Codex 提案参考文献も，証明補完のためには使わない。
+6. 補足引用は，講義記録の主線を拡張したり，証明を補ったりするためには使わない。
+7. 証明を補った方がよさそうな場合でも，本文へ直接入れず `REVISION_CANDIDATES.md` または `SOURCE_GAPS.md` に「補完禁止のため未反映」として残す。
 
 ## 6. 停止条件
 
@@ -143,6 +175,10 @@
 7. 用語が `TERM_DICTIONARY.md` の許可待ちまたは使用しない表現に当たる。
 8. 証明の不足部分を補完したくなったが，講義中の記録としては残っていない。
 9. 講演者が述べたと確定できない内容を，講演者の主張として書くことになりそうである。
+10. Codex 提案参考文献を，講義中に実際に参照された文献として扱うことになりそうである。
+11. Codex 提案参考文献の提案理由，発見経路，確認箇所，講義中の主張との関係が記録されていない。
+12. 手書きノートまたは配布資料に参考文献候補があるのに，一般検索や Codex 提案文献を先に本文引用として採用しようとしている。
+13. 補足引用を，講義中の主張に直接対応する主引用として扱うことになりそうである。
 
 停止した場合は，本文変更ではなく，候補，未解決点，確認先を `SOURCE_GAPS.md`，`CLAIM_REFERENCE_MAP.md`，`REVISION_CANDIDATES.md` のいずれかに記録する。
 
@@ -160,9 +196,10 @@
 2. 使用した資料
 3. 変更ファイル
 4. 手書きノートから抽出した参考文献候補
-5. 講義中の主張と参考文献の対応状況
-6. 記号衝突または資料間衝突
-7. 実行した確認
-8. ビルド結果
-9. 未解決点
-10. commit するなら推奨 commit 単位
+5. Codex 提案参考文献候補
+6. 講義中の主張と参考文献の対応状況
+7. 記号衝突または資料間衝突
+8. 実行した確認
+9. ビルド結果
+10. 未解決点
+11. commit するなら推奨 commit 単位

@@ -1,4 +1,4 @@
-\title{講演・集中講義記録}
+\title{集中講義記録}
 \author{}
 \date{}
 
@@ -37,6 +37,37 @@
 \definecolor{noteBadgeBack}{gray}{0.80}
 
 \makeatletter
+\newcommand{\recordtitleandcontents}{%
+    \begin{center}
+        {\Large\bfseries \@title\par}
+        \ifx\@author\@empty
+        \else
+            \vspace{0.15\baselineskip}{\normalsize \@author\par}
+        \fi
+    \end{center}
+    \vspace{0.5\baselineskip}
+    \section*{\contentsname}
+    \@starttoc{toc}
+    \vspace{0.2\baselineskip}}
+\newcommand{\recordintro}[1]{%
+    \section*{#1}%
+    \phantomsection
+    \addcontentsline{toc}{section}{#1}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\renewcommand{\section}{\@startsection{section}{1}{\z@}%
+    {1.0\baselineskip \@plus 0.25\baselineskip \@minus 0.1\baselineskip}%
+    {0.35\baselineskip}%
+    {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
+    {0.8\baselineskip \@plus 0.2\baselineskip \@minus 0.1\baselineskip}%
+    {0.25\baselineskip}%
+    {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
+    {0.6\baselineskip \@plus 0.15\baselineskip \@minus 0.1\baselineskip}%
+    {0.2\baselineskip}%
+    {\normalfont\normalsize\bfseries}}
 \newcommand{\noteenvtitle}[2]{%
     \def\note@arg{#2}%
     \ifx\note@arg\@empty #1\else #2\fi}
