@@ -7,10 +7,12 @@
 \usepackage{mathtools}
 \usepackage{mathrsfs}
 \usepackage{otf}
+\usepackage[dvipdfmx]{graphicx}
 \usepackage{url}
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{pxjahyper}
 \usepackage{enumitem}
+\usepackage{needspace}
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
 \usetikzlibrary{cd}
@@ -53,6 +55,10 @@
     \section*{#1}%
     \phantomsection
     \addcontentsline{toc}{section}{#1}}
+\newcommand{\recorddate}[1]{%
+    \Needspace{8\baselineskip}%
+    \par\vspace{0.75\baselineskip}%
+    \noindent{\small #1:}\par\nobreak\vspace{-0.55\baselineskip}}
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
@@ -144,6 +150,7 @@
 \newenvironment{dfn}[1][]{\noteinlineenvhead{定義}{#1}}{\par\medskip}
 \newenvironment{prop}[1][]{\begin{notelineenvbox}{noteLightLine}\notelineenvhead{命題}{#1}}{\end{notelineenvbox}}
 \newenvironment{thm}[1][]{\begin{notelineenvbox}{black}\notelineenvhead{定理}{#1}}{\end{notelineenvbox}}
+\newenvironment{conj}[1][]{\begin{notelineenvbox}{noteLightLine}\notelineenvhead{予想}{#1}}{\end{notelineenvbox}}
 \newenvironment{cor}[1][]{\begin{notelineenvbox}{noteLightLine}\notelineenvhead{系}{#1}}{\end{notelineenvbox}}
 \newenvironment{lem}[1][]{\begin{notelineenvbox}{noteLightLine}\notelineenvhead{補題}{#1}}{\end{notelineenvbox}}
 \newenvironment{claim}[1][]{\begin{notelineenvbox}{noteLightLine}\notelineenvhead{主張}{#1}}{\end{notelineenvbox}}

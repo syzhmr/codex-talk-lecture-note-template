@@ -6,13 +6,14 @@
 *.fls
 *.log
 *.out
-*.synctex.gz
 *.toc
 *.xdv
 *:Zone.Identifier
 .DS_Store
 
 main_final.pdf
+# Keep SyncTeX data for source/PDF navigation.
+!main_final.synctex.gz
 
 sources/handwritten_notes/*
 !sources/handwritten_notes/.gitkeep
