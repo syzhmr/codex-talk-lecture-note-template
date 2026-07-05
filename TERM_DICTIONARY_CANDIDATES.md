@@ -6,7 +6,7 @@
 ## 作成方針
 
 - 対象は，ユーザーがフォルダに追加した日本語 PDF 全体とする。
-- FO で定義された術語は，原則として既存の `TERM_DICTIONARY.md` を優先する。
+- 対象資料で定義された術語は，原則として既存の `TERM_DICTIONARY.md` を優先する。
 - 証明中に現れる標準的な可換環論・加群論・局所体・分岐理論の語について，日本語文献側の自然な表現を候補化する。
 - 出典は数学的主張の根拠ではなく，用語・文体の根拠として扱う。ただし数学的主張に使う場合は別途箇所を確認する。
 - 既存辞書と衝突する語は，候補表へ直接採用せず「衝突・要判断」に分ける。
@@ -18,21 +18,21 @@
 | 略号 | 資料 |
 |---|---|
 | Ring | `sources/translation_me/ring.pdf` |
-| Matsuda | `references/pdfs/FO/加群について(松田).pdf` |
-| AM-JP | `references/pdfs/FO/AM_Japanese.pdf` |
-| Hattori | `references/pdfs/FO/参考文献/分岐理論と有限平坦Galois表現(服部).pdf` |
+| Matsuda | `references/pdfs/project/加群について(松田).pdf` |
+| AM-JP | `references/pdfs/project/AM_Japanese.pdf` |
+| Hattori | `references/pdfs/project/参考文献/分岐理論と有限平坦Galois表現(服部).pdf` |
 | SS2009 | `references/pdfs/整数論サマースクール2009/*.pdf` |
 | ME | `sources/translation_me/` の数学英語資料 |
 | CFT2015 | `sources/translation_me/2015_Class_Field_Theory.pdf` |
 
 補足:
 
-- `references/pdfs/FO/参考文献/楕円曲線のreductionについて.pdf` は対象に含めたが，現時点のテキスト抽出では実質的に本文を取得できなかった。
+- `references/pdfs/project/参考文献/用語確認資料.pdf` は対象に含めたが，現時点のテキスト抽出では実質的に本文を取得できなかった。
 - `Ring` の索引は可換環論・加群論の語を広く含むため，この候補辞書では最重要の確認資料として扱う。
 
 ## A. 可換環論・環論
 
-| FO/英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
+| 原語・英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
 |---|---|---|---|---|
 | commutative ring | 可換環 | ユーザー採用 | Ring, AM-JP | 標準語。 |
 | ring homomorphism | 環準同型 | ユーザー採用 | Ring, Matsuda | 「環の準同型」とは書かない。 |
@@ -95,7 +95,7 @@
 
 ## B. 加群論・ホモロジー代数
 
-| FO/英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
+| 原語・英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
 |---|---|---|---|---|
 | module | 加群 | ユーザー採用 | Ring, Matsuda | 標準語。 |
 | left/right module | 左加群／右加群 | ユーザー採用 | Matsuda | 必要なら `左 \(A\)-加群`，`右 \(A\)-加群` と明示してよい。 |
@@ -147,12 +147,12 @@
 | support | support | ユーザー採用 | Ring | 「台」と訳すと混同しやすいため，英語のまま書く。 |
 | trace | トレース | ユーザー採用 | Matsuda | 「跡」は使わず「トレース」と書く。 |
 | trace map | trace map／トレース写像 | ユーザー採用 | Matsuda | 英語を保つなら `trace map`，日本語にするなら「トレース写像」。「跡写像」は使わない。 |
-| Tate's normalized trace map(s) | Tate's normalized trace map(s) | ユーザー採用 | FO | 「正規化トレース写像」と訳さず，英語の一続きの表現として扱う。FO Definition 1.100 と §4.3.2 では単数 `map`，§10.1.1 (TS2) で族を指す場合だけ複数 `maps`。 |
+| Tate's normalized trace map(s) | Tate's normalized trace map(s) | ユーザー採用 | 対象資料 | 「正規化トレース写像」と訳さず，英語の一続きの表現として扱う。対象資料の Definition 1.100 と §4.3.2 では単数 `map`，§10.1.1 (TS2) で族を指す場合だけ複数 `maps`。 |
 | determinant | 行列式 | ユーザー採用 | Matsuda | 標準語。 |
 
 ## C. 局所体・分岐・Galois 表現
 
-| FO/英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
+| 原語・英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
 |---|---|---|---|---|
 | complete discrete valuation field | 完備離散付値体 | ユーザー採用 | Hattori | 局所体の基本語。 |
 | ring of integers | 整数環 | ユーザー採用 | Hattori | 局所体の整数環。 |
@@ -193,7 +193,7 @@
 | unramified representation | 不分岐表現 | ユーザー採用 | SS2009 | 既存辞書に一致。 |
 | semistable representation | 半安定表現 | ユーザー採用 | SS2009 | 「semistable representation」と英語のままにしない。 |
 | potentially semistable representation | 潜在的半安定表現 | ユーザー採用 | SS2009 | 「潜在的に半安定な表現」ではなくこの形。 |
-| good reduction | good reduction | ユーザー採用 | SS2009 | 「良い還元」「良還元」と訳さず，FO の術語として英語を保つ。 |
+| good reduction | good reduction | ユーザー採用 | SS2009 | 「良い還元」「良還元」と訳さず，対象資料の術語として英語を保つ。 |
 | potentially good reduction | potentially good reduction | ユーザー採用 | SS2009 | `good reduction` と同じく英語を保つ。 |
 | semistable reduction | semistable reduction | ユーザー採用 | SS2009 | 「半安定還元」と訳さず英語を保つ。 |
 | strictly semistable | strictly semistable | ユーザー採用 | SS2009 | 「強半安定」と訳さず英語を保つ。 |
@@ -215,7 +215,7 @@
 
 ## D. 圏論・極限・基礎語
 
-| FO/英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
+| 原語・英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
 |---|---|---|---|---|
 | category | 圏 | 既存維持候補 | Ring | 既存辞書に一致。 |
 | functor | 関手 | ユーザー採用 | Ring | 標準語。 |
@@ -259,13 +259,13 @@
 | quotient ring | 剰余環／商環 | Matsuda, Ring は `A/I` に「剰余環」を使う。 | `A/I` は「剰余環」。一般の quotient object を直訳する必要がある場合だけ文脈判断。 |
 | quotient module | 剰余加群／商加群 | Matsuda には両方ある。ユーザー判断では「剰余加群」。 | 本文では「剰余加群」。 |
 | finite module | 有限生成加群／有限加群 | `finite` を直訳すると誤解しやすい。 | `finitely generated` は「有限生成」。`finite flat` は既存文献に合わせ「有限平坦」。 |
-| ghost map | ghost map／幽霊写像 | Ring 索引には「幽霊写像」があるが，既存辞書・FO 方針では Witt 関連の ghost 系を安易に訳さない方針。 | 既存方針を維持し，採用しない候補。 |
-| Teichmuller representation | Teichmuller 代表元／Teichmuller 表現 | Ring には「Teichmüller 表現」があるが，FO では map/representatives の区別がある。 | 既存辞書通り `Teichmuller 写像`，`Teichmuller 代表元` を維持。 |
+| ghost map | ghost map／幽霊写像 | Ring 索引には「幽霊写像」があるが，既存辞書・既存方針では Witt 関連の ghost 系を安易に訳さない方針。 | 既存方針を維持し，採用しない候補。 |
+| Teichmuller representation | Teichmuller 代表元／Teichmuller 表現 | Ring には「Teichmüller 表現」があるが，対象資料では map/representatives の区別がある。 | 既存辞書通り `Teichmuller 写像`，`Teichmuller 代表元` を維持。 |
 | filtration | filtration／フィルトレーション | SS2009 や Ring には「フィルトレーション」系がある。ユーザー判断では英語維持。 | `filtration` と書く。「フィルトレーション」は使わない。 |
 | direct limit | 順極限／帰納極限 | Ring には両方，Matsuda には順系・有向順極限がある。既存辞書は「順極限」承認済み。 | 「順極限」維持。初出で別名を併記する場合だけ「帰納極限」。 |
 | inverse limit | 逆極限／射影極限 | Ring は両方。既存辞書は初出併記。 | 「逆極限（射影極限）」初出，後は「逆極限」。 |
 | trace | トレース／trace map／跡 | Matsuda は「跡」「跡写像」。ユーザー判断では「跡」系を使わない。 | `trace` は「トレース」。写像名は `trace map` または「トレース写像」。 |
-| Tate's normalized trace map(s) | Tate's normalized trace map(s)／正規化トレース写像 | ユーザー判断では英語維持。 | `Tate の normalized trace map` とせず英語一続きで書く。FO Definition 1.100 と §4.3.2 では単数 `map`，§10.1.1 (TS2) で族を指す場合だけ複数 `maps`。 |
+| Tate's normalized trace map(s) | Tate's normalized trace map(s)／正規化トレース写像 | ユーザー判断では英語維持。 | `Tate の normalized trace map` とせず英語一続きで書く。対象資料の Definition 1.100 と §4.3.2 では単数 `map`，§10.1.1 (TS2) で族を指す場合だけ複数 `maps`。 |
 | DVR | DVR／離散付値環／DVR（離散付値環） | ユーザー判断では略語を本文で使ってよいが，括弧併記はしない。 | 文脈に応じて `DVR` または「離散付値環」の一方を書く。 |
 | support | support／台 | Ring には「台（サポート）」があるが，ユーザー判断では英語維持。 | `support` と書く。 |
 | underlying topological space | underlying topological space／台位相空間 | ユーザー判断では英語維持。 | `underlying topological space` と書く。 |
@@ -275,7 +275,7 @@
 
 `sources/translation_me/2015_Class_Field_Theory.pdf` から抽出した候補。2026-07-01 にユーザー確認を受け，承認済み語として `TERM_DICTIONARY.md` へ反映済み。
 
-| FO/英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
+| 原語・英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
 |---|---|---|---|---|
 | class field theory | 類体論 | ユーザー採用 | CFT2015 | 分野名。 |
 | class field | 類体 | ユーザー採用 | CFT2015 | `class field corresponding to H` は「\(H\) に対応する類体」。 |
@@ -304,7 +304,7 @@
 | product formula | 積公式／正規化された付値の積公式 | ユーザー採用 | CFT2015, User | 代数体の正規化された付値については「正規化された付値の積公式」。 |
 | completion at \(v\) | \(v\) に関する完備化 | ユーザー採用 | CFT2015 | \(K_v\) の説明。 |
 | local field | 局所体 | ユーザー採用 | CFT2015 | 既存辞書にも局所体周辺語あり。 |
-| global field | 大域体 | ユーザー採用 | CFT2015 | FO 本文で使う必要があれば候補。 |
+| global field | 大域体 | ユーザー採用 | CFT2015 | 対象本文で使う必要があれば候補。 |
 | idèle / idele | イデール | ユーザー採用 | CFT2015 | 長音表記。`idele` は本文では `イデール`。 |
 | idèle group / idele group | イデール群 | ユーザー採用 | CFT2015 | \(J_K\) など。 |
 | idèle class group / idele class group | イデール類群 | ユーザー採用 | CFT2015 | \(C_K=J_K/K^\times\)。 |
@@ -344,7 +344,7 @@
 
 `sources/translation_me/2015_Class_Field_Theory.pdf` の前半から抽出した追加候補。2026-07-01 にユーザー確認を受け，承認済み語として `TERM_DICTIONARY.md` へ反映済み。
 
-| FO/英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
+| 原語・英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
 |---|---|---|---|---|
 | number field / algebraic number field | 代数体／数体 | ユーザー採用 | CFT2015, User | 文脈に応じて「代数体」「数体」のどちらも可。 |
 | algebraic number | 代数的数 | ユーザー採用 | CFT2015 | `algebraic integer` は既存辞書で「代数的整数」。 |
@@ -353,7 +353,7 @@
 | separable extension | 分離拡大 | ユーザー採用 | CFT2015 | 既存辞書の「有限次分離拡大」と整合。 |
 | Galois extension | Galois 拡大 | ユーザー採用 | CFT2015 | 既存の `Galois 表現` 方針に合わせて人名は英字。 |
 | Galois group | Galois 群 | ユーザー採用 | CFT2015 | 「ガロア群」とは書かない。 |
-| field automorphism | 自己同型写像／体自己同型 | ユーザー採用 | CFT2015 | CFT2015 は「自己同型写像」。FO 本文では文脈に応じて「体自己同型」も可。 |
+| field automorphism | 自己同型写像／体自己同型 | ユーザー採用 | CFT2015 | CFT2015 は「自己同型写像」。対象本文では文脈に応じて「体自己同型」も可。 |
 | conjugate embedding / conjugate field / conjugate element | 共役写像／共役体／共役元 | ユーザー採用 | CFT2015 | 体の埋め込み・元の共役の文脈。 |
 | real embedding / complex embedding | 実埋め込み／複素埋め込み | ユーザー採用 | CFT2015 | 無限素点の説明で使用。 |
 | complex conjugation | 複素共役写像 | ユーザー採用 | CFT2015 | 自己同型としての複素共役。 |
@@ -381,7 +381,7 @@
 
 `sources/translation_me/2015_Class_Field_Theory.pdf` の局所体，イデール位相，類体論の証明周辺から抽出した候補。2026-07-01 にユーザー確認を受け，承認済み語として `TERM_DICTIONARY.md` へ反映済み。
 
-| FO/英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
+| 原語・英語表現 | 候補日本語 | 判定案 | 根拠 | 運用メモ |
 |---|---|---|---|---|
 | valued field / valuation field | 付値体 | ユーザー採用 | CFT2015, User | 付値 \(v\) を備えた体。 |
 | valuation ideal | 付値イデアル | ユーザー採用 | CFT2015, User | 付値環の極大イデアル \(P\)。 |

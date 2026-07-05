@@ -34,7 +34,7 @@ git clone git@github.com:syzhmr/codex-talk-lecture-note-template.git
 10. 最初の Codex 作業では，次のように依頼する。
 
 ```text
-WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md, TALK_RECORD_POLICY.md, SOURCE_CAPTURE_POLICY.md, REFERENCE_CITATION_POLICY.md, SOURCE_INDEX.md, SESSION_INDEX.md, HANDWRITTEN_REFERENCE_INDEX.md, CODEX_REFERENCE_CANDIDATES.md, CLAIM_REFERENCE_MAP.md を確認してから，手書きノートを入口に参考文献候補と講義中の主張を整理してください。
+WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md, TALK_RECORD_POLICY.md, SOURCE_CAPTURE_POLICY.md, REFERENCE_CITATION_POLICY.md, SOURCE_INDEX.md, SESSION_INDEX.md, HANDWRITTEN_REFERENCE_INDEX.md, HANDWRITTEN_HEADING_AUDIT.md, CODEX_REFERENCE_CANDIDATES.md, CLAIM_REFERENCE_MAP.md, LECTURE_REFERENCE_USAGE_AUDIT.md を確認してから，手書きノートを入口に参考文献候補と講義中の主張を整理してください。
 ```
 
 ## フォルダ構成
@@ -47,8 +47,10 @@ WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md, TALK_RECORD_POL
 - `SOURCE_INDEX.md`: 入力資料の台帳。
 - `SESSION_INDEX.md`: 日程・講義回・話題ブロックの対応表。
 - `HANDWRITTEN_REFERENCE_INDEX.md`: 手書きノートから拾った参考文献候補。
+- `HANDWRITTEN_HEADING_AUDIT.md`: 手書きノートの題名・小見出しを本文側へ反映するための監査表。
 - `CODEX_REFERENCE_CANDIDATES.md`: Codex が講義資料の外から提案した参考文献候補。
 - `CLAIM_REFERENCE_MAP.md`: 講義中の主張と参考文献の対応表。
+- `LECTURE_REFERENCE_USAGE_AUDIT.md`: 講義中に提示された参考文献の活用状況を記録する監査表。
 - `NOTATION_CONFLICTS.md`: 記号衝突と採用記法の記録。
 - `SOURCE_GAPS.md`: 判読不能，資料不足，引用未特定，資料間衝突の記録。
 - `TERM_DICTIONARY.md`: 用語辞書。
@@ -56,7 +58,7 @@ WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md, TALK_RECORD_POL
 - `REVISION_CANDIDATES.md`: 本文へ反映するか検討中の修正文候補。
 - `GIT_WORKFLOW.md`: Git 運用方針。
 - `main_final.tex`: 完成版記録の親ファイル。
-- `preemble.tex`: プリアンブル。定理環境，参照マクロ，資料参照マクロを定義する。
+- `preemble.tex`: プリアンブル。定理環境，参照マクロ，ヘッダナビゲーション，資料参照互換マクロを定義する。
 - `final/`: 完成版記録の LaTeX 本文。
 - `sources/handwritten_notes/`: 手書きノート。
 - `sources/board_photos/`: 板書写真。
@@ -71,6 +73,9 @@ WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md, TALK_RECORD_POL
 ## 基本方針
 
 - 手書きノートを最優先資料にし，書かれている内容をすべて TeX 化することを基本作業にする。
+- 本文整理は，`WORKFLOW_STEPS.md` の「本文整理のスモールステップ」に従い，小ステップを飛ばして完成扱いにしない。
+- 全面改訂では，手書きノートの 1 ページ目から 1 ページずつ確認する。複数ページを並べた確認用画像だけを本文反映の根拠にしない。
+- 可換図式は省略せず，Milne の可換図式ガイド (<https://www.jmilne.org/not/Mtikz.pdf>) を参照して `tikzcd`，`matrix of math nodes`，直接 `\node` と `\path` による配置の順で TeX 化を検討する。生成画像では代替しない。同型は通常 `\cong` で書き，射の矢印上の同型ラベルには `\sim` を使う。
 - 完成 PDF は，この PDF だけで読める講義ノートにする。本文中に「手書きノート p.X」「手書きノートでは」「記録として」「未確認」などの作業用ラベルを出して，内容の省略を正当化しない。
 - 完成 PDF の冒頭は，集中講義名，実施大学，時期，講演者，ノート，目次の順に置く。
   テンプレートには具体名を入れず，プロジェクトごとに埋める。
@@ -89,12 +94,16 @@ WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md, TALK_RECORD_POL
 - 手書きノートのページ数より完成 PDF が大幅に短い場合は，原則として未転記が残っているものとして扱い，完成扱いにしない。ページ数そのものを目的にせず，全ページの内容対応を完了条件にする。
 - 集中講義の日程，講義回，節題，話題ブロックの順序を保存し，教科書風の章構成へ勝手に組み替えない。
 - 節題，小見出し，定義・定理・命題などの環境見出し，用語，英語表記は手書きノートを優先し，手書きノートで英語の語は無理に日本語へ訳さない。
-- 定義環境では，いま定義している概念名や節題を任意見出しとして重複させない。例: `定義 楕円曲線の L 関数` とはせず，本文中で「...を楕円曲線 $E$ の $L$ 関数という」と書く。
-- 定理・命題などの環境見出しが人名または人名列の場合は，題名ではなく帰属として括弧付きにする。例: `定理 (Mazur)`。
+- 手書きノートで題名・小見出しとして書かれている語句は，本文側でも対応する見出しとして反映し，`HANDWRITTEN_HEADING_AUDIT.md` で確認する。
+- 手書きノートの記号が判読できる場合は，参考文献側の記号へ勝手に寄せない。記号差分や未確定記号は `NOTATION_CONFLICTS.md` または `SOURCE_GAPS.md` に分離する。
+- 定義環境では，いま定義している概念名や節題を任意見出しとして重複させない。例: `定義 概念名` とはせず，本文中で「...を概念名という」と書く。
+- 定理・命題などの環境見出しが人名または人名列の場合は，題名ではなく帰属として括弧付きにする。例: `定理 (著者名)`。
 - 板書写真，スライド，配布資料は，手書きノートの記録を確認・補強するために使う。
 - ユーザーが `sources/` や `references/` に入れた資料は，台帳化した上で対象範囲に関係する限り積極的に使う。
 - 手書きノートと配布資料に入っている参考文献を最優先の引用候補にする。
 - 講義内で参照された文献を丁寧に拾い，対応する定理番号，命題番号，節番号，ページ，URL を確認する。
+- 講義中に提示された参考文献は，登録だけで完了扱いにせず，本文，主張対応，記号確認，日本語表現確認，未確認点のどこで使ったかを `LECTURE_REFERENCE_USAGE_AUDIT.md` に記録する。
+- スキャン PDF または検索不能 PDF は画像化して確認し，短い PDF は全ページ，長い PDF は目次，索引，関連章を先に確認する。
 - 参考文献欄には URL または DOI を可能な限り明示し，文献がどのような参考資料かという説明文は原則として書かない。
 - 集中講義中に挙げられた参考文献，ユーザーが追加した参考文献，Codex が提案した参考文献は混ぜずに分けて記録する。
 - Codex が追加で参考文献を提案する場合は，講義由来の文献と出自を分けて `CODEX_REFERENCE_CANDIDATES.md` に記録する。

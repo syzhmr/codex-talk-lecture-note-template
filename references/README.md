@@ -14,15 +14,18 @@
 - 資料を探すときは，まず `HANDWRITTEN_REFERENCE_INDEX.md` と `CLAIM_REFERENCE_MAP.md` を確認する。
 - ユーザーが追加した参考文献 PDF や URL は，`REFERENCE_INDEX.md` に登録してから確認する。
 - 講義中に参照された痕跡がある文献を優先する。
+- スキャン PDF または検索不能 PDF は画像化して確認する。短い PDF は全ページ，長い PDF は目次，索引，関連章を先に画像化し，画像ファイル名，印刷ページ，節番号，定理番号，講義中の主張との対応を `notes/`，`REFERENCE_INDEX.md`，`CLAIM_REFERENCE_MAP.md`，`LECTURE_REFERENCE_USAGE_AUDIT.md` の必要箇所に記録する。
+- LMFDB (The L-functions and Modular Forms Database, https://www.lmfdb.org/) は，L 関数，modular 形式，楕円曲線，数体，$p$ 進体，Dirichlet 指標，Artin 表現，Galois 群，一般の群の具体例・不変量・標準的な記号を確認する補助データベースとして使ってよい。使う場合は，検索条件，対象ページ URL，確認した対象，不変量，講義中の主張との関係を台帳化し，証明補完や講義由来文献の代替には使わない。
 - PDF を移動・改名する場合は，先に旧パスと新パスの対応を作り，`REFERENCE_INDEX.md`，`notes/`，作業台帳の参照パスを同時に更新する。
 
 ## 本文へ参考文献由来の内容を入れる場合
 
 1. 文献名，節番号，定理番号，命題番号，ページ番号，URL などを `CLAIM_REFERENCE_MAP.md` または `REFERENCE_INDEX.md` に記録する。
 2. 講義中の主張との一致度を確認する。
-3. 参考文献の記号と講義中の記号が違う場合は `NOTATION_CONFLICTS.md` に記録する。
-4. 証明補完のために参考文献の証明を本文へ展開しない。
-5. 判読できない候補は，存在自体を `SOURCE_GAPS.md` に残す。
+3. 講義中に提示された参考文献を使った場合は，使用箇所と未確認点を `LECTURE_REFERENCE_USAGE_AUDIT.md` に記録する。
+4. 参考文献の記号と講義中の記号が違う場合は `NOTATION_CONFLICTS.md` に記録する。
+5. 証明補完のために参考文献の証明を本文へ展開しない。
+6. 判読できない候補は，存在自体を `SOURCE_GAPS.md` に残す。
 
 ## 完成 PDF 末尾の参考文献一覧
 

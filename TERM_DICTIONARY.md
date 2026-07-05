@@ -1,4 +1,4 @@
-# FO 用語辞書
+# 日本語用語辞書
 
 このファイルは、完成版ノートで使う用語・避ける表現・許可待ちの表現を管理する。
 この辞書の運用方針も，軽量化ではなく再現性のために手順化する。改訂時は `WORKFLOW_STEPS.md` の「方針変更で読む」に従い，関連方針との重複，長文化，判断順の曖昧さを確認する。
@@ -10,7 +10,7 @@
 3. 「承認済み」にあれば，本文で使う表現に従う。
 4. 「使用しない」にあれば，本文へ入れない。
 5. 「許可待ち」にあれば，本文へ入れる前にユーザー確認を取る。
-6. 辞書にない場合は，まず FO 本文の表現に従う。
+6. 辞書にない場合は，まず対象本文の表現に従う。
 7. 日本語参考文献群に定着した訳語がある場合は，それを優先する。
 8. Galois 表現，Krull 位相，profinite 群，局所体，分岐理論，Galois cohomology，保型形式などの表現は，`references/pdfs/整数論サマースクール2009/` の日本語を優先的に確認する。
 9. 可換環論・加群論など，証明中に出る標準的な代数学用語の日本語が不自然に見える場合は，`sources/translation_me/ring.pdf` を優先的に確認する。
@@ -24,7 +24,7 @@
 
 ## 承認済み
 
-| FO/英語表現 | 本文で使う表現 | 備考 |
+| 原語・英語表現 | 本文で使う表現 | 備考 |
 |---|---|---|
 | semi-linear | 半線形 | 初出では必要に応じて semi-linear を併記する。 |
 | functor | 関手 | 圏論の標準語として用いる。2026-06-30 ユーザー確認済み。 |
@@ -38,11 +38,11 @@
 | fully faithful exact functor | 忠実充満な完全関手 | 「完全忠実」などとは書かない。 |
 | exact functor | 完全関手 | 参考文献群で多く確認。 |
 | faithful tensor functor | 忠実なテンソル関手 | Chapter 3 の Tannakian 圏の文脈で用いる。 |
-| exact faithful tensor functor | 完全かつ忠実なテンソル関手 | FO の exact and faithful tensor functor。 |
+| exact faithful tensor functor | 完全かつ忠実なテンソル関手 | 対象資料の exact and faithful tensor functor。 |
 | essential image | 本質的像 | 初出で essential image を併記し，必要なら nLab と Mathlib の定義ページを脚注に入れる。参考文献リストには入れない。2026-06-29 ユーザー確認済み。 |
 | essentially surjective | 本質的全射 | 日本語で用いてよい。 |
 | tensor product | テンソル積 | 「tensor 積」は使わない。2026-06-30 ユーザー確認済み。 |
-| dual | 双対 | $B$-dual, $F$-dual のように FO が区別している場合は原語を残す。 |
+| dual | 双対 | $B$-dual, $F$-dual のように対象資料が区別している場合は原語を残す。 |
 | commutative ring | 可換環 | 標準的な可換環論の語として用いる。2026-06-30 ユーザー確認済み。 |
 | ring homomorphism | 環準同型 | 「環の準同型」とは書かない。2026-06-30 ユーザー確認済み。 |
 | \(A\)-algebra | \(A\)-代数 | TeX では `\(A\)-代数` と書く。説明文では必要に応じて「\(A\) 上の代数」も可。2026-06-30 ユーザー確認済み。 |
@@ -90,9 +90,9 @@
 | completion | 完備化 | \(I\)-進完備化などで用いる。2026-06-30 ユーザー確認済み。 |
 | complete local ring | 完備局所環 | 標準的な可換環論の語として用いる。2026-06-30 ユーザー確認済み。 |
 | Tannakian category | Tannakian 圏 | 日本語本文中では「圏」に統一する。 |
-| neutral Tannakian category | neutral Tannakian 圏 | `neutral` は FO の術語として残し，「category」は「圏」と書く。 |
-| strictly full subcategory | strictly full な充満部分圏 | FO の定義語。`strictly full` は無理に訳さず，subcategory は文脈に応じて「部分圏」「充満部分圏」と書く。 |
-| profinite set | profinite 集合 | FO と手書きノートの用語に従う。 |
+| neutral Tannakian category | neutral Tannakian 圏 | `neutral` は対象資料の術語として残し，「category」は「圏」と書く。 |
+| strictly full subcategory | strictly full な充満部分圏 | 対象資料の定義語。`strictly full` は無理に訳さず，subcategory は文脈に応じて「部分圏」「充満部分圏」と書く。 |
+| profinite set | profinite 集合 | 対象資料と手書きノートの用語に従う。 |
 | profinite group | profinite 群 | 「profinite group」と混ぜない。 |
 | open subgroup / closed subgroup | 開部分群／閉部分群 | profinite 群・位相群の文脈で用いる。2026-06-30 ユーザー確認済み。 |
 | Pontryagin dual | Pontryagin 双対 | `Pontrjagin` とは書かない。2026-06-30 ユーザー確認済み。 |
@@ -105,7 +105,7 @@
 | direct system | 順系 | 既存の「順極限」と整合させる。2026-06-30 ユーザー確認済み。 |
 | direct limit / inductive limit | 順極限 | `\varinjlim` で表す極限。本文では「直極限」と書かない。2026-06-29 ユーザー確認済み。 |
 | transition map / transition morphism | 推移写像 | 逆系の構造写像を地の文で呼ぶときに用いる。一般の圏の定義では，必要以上に用語化せず式と「射」で述べる。 |
-| arithmetic Frobenius | 算術的 Frobenius | FO では arithmetic Frobenius。手書きノートには「数論的 Frobenius」と読める箇所があるが，本文では Chapter 2 との整合性も考えて「算術的 Frobenius」に統一する。 |
+| arithmetic Frobenius | 算術的 Frobenius | 対象資料では arithmetic Frobenius。手書きノートには「数論的 Frobenius」と読める箇所があるが，本文では Chapter 2 との整合性も考えて「算術的 Frobenius」に統一する。 |
 | geometric Frobenius | 幾何的 Frobenius | Chapter 2 の既存表現に合わせる。 |
 | absolute Frobenius | 絶対 Frobenius | 「absolute Frobenius」と英語のまま混ぜない。 |
 | decomposition subgroup | 分解群 | 初出で必要なら英語を併記する。本文では「decomposition subgroup」と混ぜない。 |
@@ -214,10 +214,10 @@
 | compatible system | 整合系 | Galois 表現の族の文脈で用いる。2026-06-30 ユーザー確認済み。 |
 | strict compatible system | 厳整合系 | 「厳密整合系」とは書かない。2026-06-30 ユーザー確認済み。 |
 | étale cohomology | étale cohomology | 英語のまま書き，必ず `étale` とアクセントを付ける。`etale cohomology`，`エタールコホモロジー` とは書かない。2026-06-30 ユーザー確認済み。 |
-| étale algebra / étale morphism | エタール代数／エタール射 | 日本語参考文献群で確認。英語で残す場合は必ず `étale` と書く。$\varphi$-module では FO 表記も考慮する。 |
-| étale $\varphi$-module | étale $\varphi$-module | FO 表記を保つ。`エタール $\varphi$-module` とは書かない。2026-06-29 ユーザー確認済み。 |
+| étale algebra / étale morphism | エタール代数／エタール射 | 日本語参考文献群で確認。英語で残す場合は必ず `étale` と書く。$\varphi$-module では対象資料の表記も考慮する。 |
+| étale $\varphi$-module | étale $\varphi$-module | 対象資料の表記を保つ。`エタール $\varphi$-module` とは書かない。2026-06-29 ユーザー確認済み。 |
 | monic | モニック | 「最高次係数が $1$」と説明的に言い換えず，本文では「モニック」を用いる。 |
-| uniformizer | uniformizer | 「一様化元」と訳さず，FO の用語として原語を保つ。 |
+| uniformizer | uniformizer | 「一様化元」と訳さず，対象資料の用語として原語を保つ。 |
 | nth Witt polynomial | 第 $n$ 番目の Witt 多項式 | `W_n` の添字を指す表現。通常の次数と紛れるため「第 $n$ 次 Witt 多項式」は使わない。 |
 | ring of Witt vectors over $A$ | $A$ 上の Witt 環 | 記号は $\mathbb{W}(A)$ を用いる。英語を混ぜず，「Witt ベクトルの環」とも書かない。 |
 | ring of Witt vectors of length $n$ over $A$ | $A$ 上の長さ $n$ の Witt ベクトル環 | 記号は $\mathbb{W}_n(A)$ を用いる。「有限長 Witt ベクトル」は使わない。 |
@@ -242,8 +242,8 @@
 | characteristic polynomial | 特性多項式 | Galois 表現や線形変換の characteristic polynomial。英語のまま混ぜない。2026-06-30 ユーザー確認済み。 |
 | semi-simple / semisimple | 半単純 | 表現・線形変換・圏の文脈で用いる。 |
 | unramified representation | 不分岐表現 | \(I_K\) が自明に作用する \(\ell\) 進表現。形容的には「不分岐である」と書く。2026-06-30 ユーザー確認済み。 |
-| good reduction | good reduction | \(\ell\) 進表現の文脈では FO の術語として英語を保つ。「良い還元」「良還元」と訳さない。2026-06-30 ユーザー確認済み。 |
-| potentially good reduction | potentially good reduction | good reduction と同じく FO の術語として英語を保つ。「潜在的に良い還元」と訳さない。2026-06-30 ユーザー確認済み。 |
+| good reduction | good reduction | \(\ell\) 進表現の文脈では対象資料の術語として英語を保つ。「良い還元」「良還元」と訳さない。2026-06-30 ユーザー確認済み。 |
+| potentially good reduction | potentially good reduction | good reduction と同じく対象資料の術語として英語を保つ。「潜在的に良い還元」と訳さない。2026-06-30 ユーザー確認済み。 |
 | semistable representation / semi-stable representation | 半安定表現 | \(\ell\ne p\) の局所体の \(\ell\) 進表現では，\(I_K\) が冪単に作用する表現。2026-06-30 ユーザー確認済み。 |
 | potentially semistable representation / potentially semi-stable representation | 潜在的半安定表現 | 有限次拡大後に半安定表現になる表現。2026-06-30 ユーザー確認済み。 |
 | semistable reduction | semistable reduction | 幾何・還元の術語として英語を保つ。「半安定還元」と訳さない。2026-06-30 ユーザー確認済み。 |
@@ -263,10 +263,10 @@
 | Weil--Deligne representation | Weil--Deligne 表現 | Chapter 2 で用いる。2026-06-30 ユーザー確認済み。 |
 | weight | 重さ | Galois 表現周辺でも `weight` 単独は「重さ」と書く。「ウェイト」は使わない。2026-06-30 ユーザー確認済み。 |
 | pure | pure | Galois 表現周辺の術語として英語を保つ。「純」と訳さない。形容詞として使うときは「pure な幾何的表現」「pure な表現」のように書き，「pure 表現」と詰めない。2026-06-30, 2026-07-01 ユーザー確認済み。 |
-| elementary representation | elementary 表現 | FO の術語として `elementary` を残す。「初等的表現」とは訳さない。 |
+| elementary representation | elementary 表現 | 対象資料の術語として `elementary` を残す。「初等的表現」とは訳さない。 |
 | weight filtration | weight filtration | `weight` と `filtration` を混ぜて訳さず，英語のまま書く。「重さ filtration」「重さフィルトレーション」は使わない。2026-06-30 ユーザー確認済み。 |
 | weighted representation | weighted representation | Galois 表現周辺の術語として英語を保つ。「重さ付き表現」と訳さない。 |
-| effective | effective | 強い日本語用例が確認できないため FO 術語として残す。定義では「代数的整数であること」を必ず明示する。 |
+| effective | effective | 強い日本語用例が確認できないため対象資料の術語として残す。定義では「代数的整数であること」を必ず明示する。 |
 | algebraic integer | 代数的整数 | 「algebraic integer」と英語のまま混ぜない。 |
 | flat | 平坦 | 加群・係数拡大の文脈で使う。`finite flat` など固有の組み合わせは周辺文献の表現も見て判断する。 |
 | module | 加群 | 標準的な加群論の語として用いる。2026-06-30 ユーザー確認済み。 |
@@ -313,11 +313,11 @@
 | support | support | 加群・層・表現などの support は英語のまま書く。「台」と訳すと混同しやすいため避ける。2026-06-30 ユーザー確認済み。 |
 | reciprocal root | 逆根 | 初出では「逆根，すなわち多項式の根の逆数」と定義を述べる。2026-06-30 ユーザー確認済み。 |
 | geometric representation | 幾何的表現 | `geometric` のみを術語として使う文脈では「幾何的」と書く。 |
-| sub-Tannakian category | Tannakian 部分圏 | FO の sub-Tannakian category。 |
+| sub-Tannakian category | Tannakian 部分圏 | 対象資料の sub-Tannakian category。 |
 | abelian category | アーベル圏 | 「Abel 圏」と書かない。 |
 | additive category | 加法圏 | 圏論の標準用語として用いる。 |
-| mixed motive | 混合 motive | `motive` は現時点では FO 周辺の術語として残す。 |
-| procyclic group | procyclic 群 | Chapter 2 では FO の術語として `procyclic` を残し，「群」を付ける。 |
+| mixed motive | 混合 motive | `motive` は現時点では対象資料 周辺の術語として残す。 |
+| procyclic group | procyclic 群 | Chapter 2 では対象資料の術語として `procyclic` を残し，「群」を付ける。 |
 | unipotent | 冪単 | 線形代数・代数群の文脈で用いる。 |
 | nilpotent | 冪零 | 線形代数・環論の文脈で用いる。 |
 | smooth | 滑らかな | スキーム・多様体の性質として使う場合。 |
@@ -326,7 +326,7 @@
 | simple normal crossing | 単純正規交叉／simple normal crossing | 文脈に応じて日本語または英語で書く。2026-06-30 ユーザー確認済み。 |
 | torsion point / \(\ell^n\)-torsion | 等分点／\(\ell^n\)-等分点の群 | 楕円曲線・アーベル多様体の Tate 加群で使う。 |
 | supersingular | 超特異 | 楕円曲線の文脈で確認済み。 |
-| ordinary | ordinary | 現時点では無理に訳さず FO の術語として残す。必要なら初出で「通常的」を併記する。 |
+| ordinary | ordinary | 現時点では無理に訳さず対象資料の術語として残す。必要なら初出で「通常的」を併記する。 |
 | complete discrete valuation field | 完備離散付値体 | 局所体の基本語として用いる。2026-06-30 ユーザー確認済み。 |
 | ring of integers | 整数環 | 局所体の整数環。2026-06-30 ユーザー確認済み。 |
 | prime element | 素元 | `uniformizer` は既存方針通り英語維持なので混同しない。2026-06-30 ユーザー確認済み。 |
@@ -403,7 +403,7 @@
 | cyclotomic field | 円分体 | 既存の「円分指標」と整合。2026-07-01 ユーザー確認済み。 |
 | quadratic field | 二次体 | 代数体の基本例。2026-07-01 ユーザー確認済み。 |
 | conductor | 導手 | 局所類体論や Galois 表現の文脈で使う。2026-06-30 ユーザー確認済み。 |
-| named theorem / theorem name | 確認済み名称だけ使用 | 定理名・補題名・構成名は固有名として扱う。FO 本文，原典，または標準的用例で確認できない名称を作らない。特に人名付き定理名や日本語名を作業側で勝手に作らない。内容で述べ，出典を脚注・メモに示す。2026-07-01 ユーザー指摘により追加。 |
+| named theorem / theorem name | 確認済み名称だけ使用 | 定理名・補題名・構成名は固有名として扱う。対象本文，原典，または標準的用例で確認できない名称を作らない。特に人名付き定理名や日本語名を作業側で勝手に作らない。内容で述べ，出典を脚注・メモに示す。2026-07-01 ユーザー指摘により追加。 |
 | standard / well-known | 単独では使わない | 「標準的である」「よく知られている」だけで証明や引用の代わりにしない。仮定を本文で照合するか，証明するか，正確な引用箇所を示す。2026-07-01 ユーザー確認済み。 |
 | unconfirmed Japanese term | 英語優先 | 訳語が未確定または不自然な場合は英語を優先する。新しい日本語候補は本文へ直接入れず，辞書候補としてユーザー確認に回す。2026-07-01 ユーザー確認済み。 |
 | source as proof subject | 使用しない | 証明本文で「文献 X が示す」「Stacks Project の補題により」を主語にして進めない。本文では現在の記号で数学的内容を書き，出典は脚注・メモに分離する。2026-07-01 ユーザー確認済み。 |
@@ -417,18 +417,18 @@
 | trace map | trace map／トレース写像 | 写像名として英語を保つ場合は `trace map`，日本語にする場合は「トレース写像」と書く。「跡写像」は使わない。2026-06-30 ユーザー確認済み。 |
 | trace estimate | trace estimate | Sen80 と Tate's normalized trace map(s) の文脈では英語を保つ。「トレース評価」とは書かない。2026-06-30 ユーザー確認済み。 |
 | normalized trace map | normalized trace map | Tate's normalized trace map 以外で一般に trace map の正規化を指す場合。英語のまま書き，「正規化トレース写像」「正規化跡写像」とは書かない。2026-06-30 ユーザー確認済み。 |
-| Tate's normalized trace map | Tate's normalized trace map | FO Definition 1.100 と §4.3.2 では，個々の \(R_n\), \(R_r\) や構成を指すため単数 `map`。一続きの英語表現として扱い，「Tate の normalized trace map」とは書かない。2026-07-01 ユーザー確認済み。 |
-| Tate's normalized trace maps | Tate's normalized trace maps | FO §10.1.1 (TS2) のように \(R_{H,n}\) の族を指す場合だけ複数 `maps`。単数・複数は FO 原文の対象に合わせる。2026-07-01 ユーザー確認済み。 |
-| almost étale condition | almost étale である／almost étale の定義を満たす | FO/Sen80 の術語として `almost étale` を残すが，「almost étale 条件」は原則使わない。定義の項目を指す場合は「定義の (1) を満たす」のように書く。点なしの `almost etale` は使わない。 |
+| Tate's normalized trace map | Tate's normalized trace map | 対象資料の Definition 1.100 と §4.3.2 では，個々の \(R_n\), \(R_r\) や構成を指すため単数 `map`。一続きの英語表現として扱い，「Tate の normalized trace map」とは書かない。2026-07-01 ユーザー確認済み。 |
+| Tate's normalized trace maps | Tate's normalized trace maps | 対象資料 §10.1.1 (TS2) のように \(R_{H,n}\) の族を指す場合だけ複数 `maps`。単数・複数は対象資料の原文の対象に合わせる。2026-07-01 ユーザー確認済み。 |
+| almost étale condition | almost étale である／almost étale の定義を満たす | 対象資料/Sen80 の術語として `almost étale` を残すが，「almost étale 条件」は原則使わない。定義の項目を指す場合は「定義の (1) を満たす」のように書く。点なしの `almost etale` は使わない。 |
 | Cohen ring | Cohen 環 | 本文では「Cohen ring」と英語のまま書かない。 |
 | Cohen structure theorem | Cohen structure theorem | 定理名は英語のまま書く。「Cohen 構造定理」とは書かない。2026-07-01 ユーザー確認済み。 |
-| filtration | filtration | 「フィルトレーション」と訳さず，FO の用語として原語を保つ。 |
-| filtered group | filtered group | 「フィルトレーション付き群」と訳さず，FO の用語として原語を保つ。 |
+| filtration | filtration | 「フィルトレーション」と訳さず，対象資料の用語として原語を保つ。 |
+| filtered group | filtered group | 「フィルトレーション付き群」と訳さず，対象資料の用語として原語を保つ。 |
 | coordinates | 座標 | Witt 展開や strict $p$-ring の展開で用いる。本文では「coordinates」と英語のまま書かない。 |
 | well-defined | 定義できる／定まる | 本文では英語のまま使わず、文脈に応じて自然な日本語にする。 |
 | formal derivative | 形式的な微分 | Hensel の補題などで $F'$ を説明する場合に用いる。「導多項式」「形式微分」は使わない。 |
-| strict p-ring | strict $p$-ring | FO の術語として原語を保つ。無理に日本語訳を作らない。 |
-| p-basis | $p$-basis | FO の術語として原語を保つ。無理に日本語訳を作らない。 |
+| strict p-ring | strict $p$-ring | 対象資料の術語として原語を保つ。無理に日本語訳を作らない。 |
+| p-basis | $p$-basis | 対象資料の術語として原語を保つ。無理に日本語訳を作らない。 |
 | Dedekind's lemma | Dedekind の補題 | 異なる体準同型・自己同型の線形独立性を指す場合。本文では「Dedekind の automorphisms の線形独立性」と混ぜない。 |
 | cohomology | コホモロジー | 日本語本文では「cohomology」と英語のまま混ぜない。ただし論文題名や節見出しは原表記を保ってよい。 |
 | continuous cohomology | 連続コホモロジー | \(H^n_{\mathrm{cont}}\) の本文説明で用いる。 |
@@ -436,27 +436,27 @@
 | Galois cohomology | Galois cohomology | 英語のまま書く。「Galois コホモロジー」と混ぜない。2026-06-30 ユーザー確認済み。 |
 | cohomology class | コホモロジー類 | 「cohomology 類」「cohomology class」と混ぜない。2026-06-30 ユーザー確認済み。 |
 | non-abelian cohomology | non-abelian cohomology | 英語を保つ。「非可換 cohomology」「非可換コホモロジー」とは書かない。2026-06-30 ユーザー確認済み。 |
-| cochain / cochain complex | cochain／cochain complex | FO の式で定義される術語として原語を保つ。必要なら「cochain complex である」と書く。 |
+| cochain / cochain complex | cochain／cochain complex | 対象資料の式で定義される術語として原語を保つ。必要なら「cochain complex である」と書く。 |
 | cocycle / coboundary | cocycle／coboundary | \(Z^n\), \(B^n\) の式で定義して用いる。無理に訳語を作らない。 |
 | inflation / restriction | inflation／restriction | Galois cohomology の標準写像名として原語を保つ。本文では商写像による引き戻し，制限写像で意味を説明する。 |
 | connecting map | 連結準同型 | アーベル群値の cohomology で使う。非可換 pointed set の場合は文脈に応じて「connecting map」も許容する。 |
 | section | section | 連続な集合論的 section のように用いる。無理に「切断」と訳さない。 |
-| topological G-module | topological $G$-module | FO の術語として原語を保つ。本文中の説明では「位相可換群」「連続作用」を用いて意味を明示する。 |
-| discrete G-module | discrete $G$-module | FO の術語として原語を保つ。本文中の説明では離散位相と安定化群が開部分群であることを明示する。 |
-| topological G-group | topological $G$-group | FO の術語として原語を保つ。本文中の説明では「位相群」「連続作用」「各元が群自己同型として作用すること」を明示する。 |
+| topological G-module | topological $G$-module | 対象資料の術語として原語を保つ。本文中の説明では「位相可換群」「連続作用」を用いて意味を明示する。 |
+| discrete G-module | discrete $G$-module | 対象資料の術語として原語を保つ。本文中の説明では離散位相と安定化群が開部分群であることを明示する。 |
+| topological G-group | topological $G$-group | 対象資料の術語として原語を保つ。本文中の説明では「位相群」「連続作用」「各元が群自己同型として作用すること」を明示する。 |
 | topological group | 位相群 | 「位相付き群」は使わない。2026-06-29 ユーザー確認済み。 |
 | topological module | 位相付き加群 | 一般の位相環上の加群を指す場合に用いる。加法とスカラー倍の連続性が必要な文脈では本文で明示する。2026-06-29 ユーザー確認済み。 |
-| pointed set | pointed set | 非可換 \(H^1\) の値域として FO の術語を保つ。本文では基点と完全性の意味を必ず説明する。 |
+| pointed set | pointed set | 非可換 \(H^1\) の値域として対象資料の術語を保つ。本文では基点と完全性の意味を必ず説明する。 |
 | distinguished point | 基点 | 非可換 \(H^1\) の pointed set では，自明な cocycle の類を指す。必要なら初出で「自明な cocycle の類」と説明する。 |
-| \(B\)-representation | \(B\)-representation | Chapter 3 の FO 術語として原語を保つ。 |
-| free \(B\)-representation | free \(B\)-representation | Chapter 3 の FO 術語として原語を保つ。 |
-| trivial \(B\)-representation | trivial \(B\)-representation | Chapter 3 の FO 術語として原語を保つ。 |
+| \(B\)-representation | \(B\)-representation | Chapter 3 の対象資料の術語として原語を保つ。 |
+| free \(B\)-representation | free \(B\)-representation | Chapter 3 の対象資料の術語として原語を保つ。 |
+| trivial \(B\)-representation | trivial \(B\)-representation | Chapter 3 の対象資料の術語として原語を保つ。 |
 | Tate twist | Tate twist | 英語のまま書く。「Tate 捻り」と訳さない。2026-06-30 ユーザー確認済み。 |
 | monodromy operator | モノドロミー作用素 | Weil--Deligne 表現や半安定還元の文脈で用いる。2026-06-30 ユーザー確認済み。 |
 | nilpotent operator | 冪零な線形写像 | 「冪零作用素」は標準的だが，本文ではまず平易に「冪零な線形写像」と書く。 |
 | length | 長さ | 定義で明示して使う。Witt ベクトルの「長さ \(n\)」とは文脈で区別する。 |
-| regular \((F,G)\)-ring / \((F,G)\)-regular | regular \((F,G)\)-ring／\((F,G)\)-regular | Chapter 3 の FO 術語として原語を保つ。地の文では「regular であること」と書く。 |
-| admissible / \(B\)-admissible | admissible／\(B\)-admissible | Chapter 3 の FO 術語として原語を保つ。地の文では定義を添えて使う。 |
+| regular \((F,G)\)-ring / \((F,G)\)-regular | regular \((F,G)\)-ring／\((F,G)\)-regular | Chapter 3 の対象資料の術語として原語を保つ。地の文では「regular であること」と書く。 |
+| admissible / \(B\)-admissible | admissible／\(B\)-admissible | Chapter 3 の対象資料の術語として原語を保つ。地の文では定義を添えて使う。 |
 | snake lemma | 蛇の補題 | 標準的な補題名として用いる。2026-06-30 ユーザー確認済み。 |
 | five lemma | 5項補題 | アラビア数字で書く。2026-06-30 ユーザー確認済み。 |
 | Nakayama's lemma | 中山の補題 | 人名は漢字で書く。2026-06-30 ユーザー確認済み。 |
@@ -511,8 +511,8 @@
 
 | 候補表現 | 用途 | 状態 |
 |---|---|---|
-| Groebner 基底 | Lemma 3.23 の次元計算の説明 | FO の文脈から離れるため，本文では現在使用しない。FO 本文・手書きノート・対象参考文献が明示的に必要とし，ユーザー確認がある場合だけ再検討する。 |
-| Buchberger の判定法 | Lemma 3.23 の次元計算の説明 | FO の文脈から離れるため，本文では現在使用しない。FO 本文・手書きノート・対象参考文献が明示的に必要とし，ユーザー確認がある場合だけ再検討する。 |
+| Groebner 基底 | Lemma 3.23 の次元計算の説明 | 対象資料の文脈から離れるため，本文では現在使用しない。対象本文・手書きノート・対象参考文献が明示的に必要とし，ユーザー確認がある場合だけ再検討する。 |
+| Buchberger の判定法 | Lemma 3.23 の次元計算の説明 | 対象資料の文脈から離れるため，本文では現在使用しない。対象本文・手書きノート・対象参考文献が明示的に必要とし，ユーザー確認がある場合だけ再検討する。 |
 
 ## 使用しない
 
@@ -578,9 +578,9 @@
 | 標準同型／正準同型 | 現時点の参考文献群では確認できないため原則使わない。「自然な同型」を優先する。 |
 | 充満忠実 | 参考文献群にはあるが、本原稿では「忠実充満」に統一する。 |
 | 遷移射 | 逆系の構造写像を地の文で呼ぶ場合は「推移写像」に統一する。 |
-| エタール $\varphi$-module | FO 表記 `étale $\varphi$-module` に統一する。 |
-| ghost map／ghost components | 禁止。FO 本文と手書きノートでは名称を用いないため，本文では写像 $\rho$ と成分 $w_i$ で述べる。 |
-| ghost 写像／ghost 成分 | 禁止。FO 本文と手書きノートでは名称を用いないため，本文では写像 $\rho$ と成分 $w_i$ で述べる。 |
+| エタール $\varphi$-module | 対象資料の表記 `étale $\varphi$-module` に統一する。 |
+| ghost map／ghost components | 禁止。対象本文と手書きノートでは名称を用いないため，本文では写像 $\rho$ と成分 $w_i$ で述べる。 |
+| ghost 写像／ghost 成分 | 禁止。対象本文と手書きノートでは名称を用いないため，本文では写像 $\rho$ と成分 $w_i$ で述べる。 |
 | shift map | Verschiebung の説明では「シフト写像」と書く。 |
 | etale／Etale | 英語で残す場合は `étale`／`Étale` とアクセントを付ける。検索時は点なし表記も漏れ確認の対象にする。 |
 | Teichmuller map／Frobenius map | 「Teichmuller 写像」「Frobenius 写像」と書く。 |
@@ -642,7 +642,7 @@
 | 局所群 | 「各素点 $v$ で得られる絶対 Galois 群 $G_{\mathbb Q_v}$」などと具体的に書く。 |
 | filtration | 「filtration」と書く。「フィルトレーション」は使わない。 |
 | filtered group | 「filtered group」と書く。「フィルトレーション付き群」は使わない。 |
-| 良い還元／良還元 | FO の good reduction は `good reduction` と書く。 |
+| 良い還元／良還元 | 対象資料の good reduction は `good reduction` と書く。 |
 | 商加群 | 加群の quotient module は「剰余加群」と書く。 |
 | 準同型加群 | `Hom加群` と書く。 |
 | Hom 加群 | `Hom加群` とスペースなしで書く。 |
@@ -652,17 +652,17 @@
 | 跡／跡写像 | 「トレース」「trace map」「トレース写像」を用いる。 |
 | トレース評価 | Sen/Tate 周辺では `trace estimate` と書く。 |
 | 正規化トレース／正規化トレース写像 | `normalized trace map` と書く。Tate の構成を指す場合は `Tate's normalized trace map` と書く。 |
-| 正規化トレース写像／正規化跡写像 | `normalized trace map` と書く。FO の (TS2) で族を指す場合だけ `Tate's normalized trace maps` と書く。 |
+| 正規化トレース写像／正規化跡写像 | `normalized trace map` と書く。対象資料の (TS2) で族を指す場合だけ `Tate's normalized trace maps` と書く。 |
 | Tate の normalized trace map | `Tate's normalized trace map` と一続きに書く。族を指す場合だけ `Tate's normalized trace maps` と書く。 |
 | 局所体拡大の基底計算／基底計算 | 本文では独自の要約ラベルとして使わない。剰余体基底の持ち上げ，uniformizer の冪，\(x^r\varpi^j\) 型の基底表示など，実際に使う元と表示を書く。 |
-| 大きい添字の段階／小さい添字の段階 | FO・手書きノートにない説明的な言い換えで、本文では作為的に見える。射の向きは式や図式で示す。 |
+| 大きい添字の段階／小さい添字の段階 | 対象資料・手書きノートにない説明的な言い換えで、本文では作為的に見える。射の向きは式や図式で示す。 |
 | 有限段階／各段階／各段 | 添字が明示されている場合は「各 \(n\) で」「任意の \(i\) について」のように書く。「有限段階」は逆極限・順極限・無限次拡大と対比する有限商や有限次部分拡大を指す場合だけ使う。 |
-| ○○条件 | FO 内で定義された性質に対して，日本語の複合語として作らない。「○○である」「定義の (2) を満たす」「(TS1) を満たす」のように書く。原典で確認できる英語名 `conditions` は条件群全体の名称に限り使い，個別の確認では FO の項目名に戻す。 |
-| 情報を忘れる向き | FO・手書きノートにない解釈説明。必要な場合は推移写像の式や可換図式で示す。 |
+| ○○条件 | 対象資料内で定義された性質に対して，日本語の複合語として作らない。「○○である」「定義の (2) を満たす」「(TS1) を満たす」のように書く。原典で確認できる英語名 `conditions` は条件群全体の名称に限り使い，個別の確認では対象資料の項目名に戻す。 |
+| 情報を忘れる向き | 対象資料・手書きノートにない解釈説明。必要な場合は推移写像の式や可換図式で示す。 |
 | Hensel の補題（単純根版） | 本文では単に「Hensel の補題」と書く。必要な仮定は式で示す。 |
 | 一様化元 | `uniformizer` に統一する。 |
 | 第 $n$ 次 Witt 多項式 | `W_n` の添字を指す箇所では「第 $n$ 番目の Witt 多項式」と書く。通常の次数と紛れるため。 |
-| 〜になるように設計されている | FO 本文・手書きノートにない説明的な言い方。定義や等式そのもので述べる。 |
+| 〜になるように設計されている | 対象本文・手書きノートにない説明的な言い方。定義や等式そのもので述べる。 |
 | 有限長 Witt ベクトル | 「$A$ 上の長さ $n$ の Witt ベクトル」と書く。 |
 | Witt ベクトルの環 | 定義文では「$A$ 上の Witt 環」または「$A$ 上の長さ $n$ の Witt ベクトル環」と書く。 |
 | \(p\) 反転／$p$ 反転 | 「\([1/p]\) でテンソルして有理係数へ移す」のように，方向を明示する。 |
