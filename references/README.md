@@ -6,7 +6,7 @@
 
 - `pdfs/`: 論文，講義ノート，書籍抜粋などの PDF。
 - `notes/`: 各参考文献の要点，使った定理番号，本文との対応メモ。
-- `REFERENCE_INDEX.md`: 現在置かれている PDF 群，外部参照，紙媒体・ローカル保管資料の棚卸しと要確認事項。
+- `REFERENCE_INDEX.md`: 現在置かれている PDF 群，外部参照，紙媒体・Git 管理しない個別例外資料の棚卸しと要確認事項。
 
 ## 整理方針
 
@@ -35,5 +35,6 @@
 
 ## Git 管理
 
-参考文献 PDF は原則として Git に入れない。
-例外的に共有する場合は，権利と容量を確認し，`PROJECT_PROFILE.md` と `REFERENCE_INDEX.md` に理由を記録する。
+参考文献 PDF は，プロジェクト同期に必要な資料として原則 Git で追跡する。
+GitHub の 100MB 制限，公開範囲，権利上の問題がある資料だけを個別例外として除外し，`PROJECT_PROFILE.md` と `REFERENCE_INDEX.md` に理由，代替ファイル，分割方針，保管場所を記録する。
+100MB 超の元 PDF は，意味のある単位に分割した 100MB 未満の PDF を追跡し，元 PDF を `.gitignore` または `.git/info/exclude` に明示する。

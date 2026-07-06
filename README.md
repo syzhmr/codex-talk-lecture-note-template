@@ -34,7 +34,7 @@ git clone git@github.com:syzhmr/codex-talk-lecture-note-template.git
 10. 最初の Codex 作業では，次のように依頼する。
 
 ```text
-WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md, TALK_RECORD_POLICY.md, SOURCE_CAPTURE_POLICY.md, REFERENCE_CITATION_POLICY.md, SOURCE_INDEX.md, SESSION_INDEX.md, HANDWRITTEN_REFERENCE_INDEX.md, HANDWRITTEN_HEADING_AUDIT.md, CODEX_REFERENCE_CANDIDATES.md, CLAIM_REFERENCE_MAP.md, LECTURE_REFERENCE_USAGE_AUDIT.md を確認してから，手書きノートを入口に参考文献候補と講義中の主張を整理してください。
+WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md, TALK_RECORD_POLICY.md, SOURCE_CAPTURE_POLICY.md, REFERENCE_CITATION_POLICY.md, SOURCE_INDEX.md, SESSION_INDEX.md, HANDWRITTEN_REFERENCE_INDEX.md, HANDWRITTEN_HEADING_AUDIT.md, HANDWRITTEN_EXPRESSION_REVIEW.md, CODEX_REFERENCE_CANDIDATES.md, CLAIM_REFERENCE_MAP.md, LECTURE_REFERENCE_USAGE_AUDIT.md を確認してから，手書きノートを入口に参考文献候補と講義中の主張を整理してください。
 ```
 
 ## フォルダ構成
@@ -48,6 +48,7 @@ WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md, TALK_RECORD_POL
 - `SESSION_INDEX.md`: 日程・講義回・話題ブロックの対応表。
 - `HANDWRITTEN_REFERENCE_INDEX.md`: 手書きノートから拾った参考文献候補。
 - `HANDWRITTEN_HEADING_AUDIT.md`: 手書きノートの題名・小見出しを本文側へ反映するための監査表。
+- `HANDWRITTEN_EXPRESSION_REVIEW.md`: 手書き表現，欄外メモ，レポート問題の作用範囲をページ単位で再点検する台帳。
 - `CODEX_REFERENCE_CANDIDATES.md`: Codex が講義資料の外から提案した参考文献候補。
 - `CLAIM_REFERENCE_MAP.md`: 講義中の主張と参考文献の対応表。
 - `LECTURE_REFERENCE_USAGE_AUDIT.md`: 講義中に提示された参考文献の活用状況を記録する監査表。
@@ -95,6 +96,9 @@ WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md, TALK_RECORD_POL
 - 手書きノートのページ数より完成 PDF が大幅に短い場合は，原則として未転記が残っているものとして扱い，完成扱いにしない。ページ数そのものを目的にせず，全ページの内容対応を完了条件にする。
 - 集中講義の日程，講義回，節題，話題ブロックの順序を保存し，教科書風の章構成へ勝手に組み替えない。
 - 節題，小見出し，定義・定理・命題などの環境見出し，用語，英語表記は手書きノートを優先し，手書きノートで英語の語は無理に日本語へ訳さない。
+- 手書きノートの日本語が判読できる場合は，その語順，粒度，表現を優先する。日本語参考文献は，判読不能箇所や未確定候補の表現確認に限って使う。
+- 数学的に自然に見える補いであっても，手書きノートにない主張，理由，証明範囲，接続文，抽象化表現を本文へ足さない。
+- `レポート問題`，`これを示せ`，欄外メモ，矢印，引き出し線は，画像上の位置から作用範囲を確認し，不明な場合は本文で広げず台帳に残す。
 - 手書きノートで題名・小見出しとして書かれている語句は，本文側でも対応する見出しとして反映し，`HANDWRITTEN_HEADING_AUDIT.md` で確認する。
 - 手書きノートの記号が判読できる場合は，参考文献側の記号へ勝手に寄せない。記号差分や未確定記号は `NOTATION_CONFLICTS.md` または `SOURCE_GAPS.md` に分離する。
 - 定義環境では，いま定義している概念名や節題を任意見出しとして重複させない。例: `定義 概念名` とはせず，本文中で「...を概念名という」と書く。
@@ -116,7 +120,9 @@ WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md, TALK_RECORD_POL
 - 参考文献確認は，手書きノートを TeX 化した後で，証明や紹介された主張・事実が文献のどこにあるかを補足するために行う。
 - 講義中の主張と参考文献の主張は，完全一致，記号違い，仮定違い，類似，未確定を区別する。
 - 定理番号，ページ番号，URL は推測で書かない。
-- 権利上共有できない PDF，写真，手書きノート，配布資料はテンプレート配布物には含めない。
+- 手書きノート，板書写真，スライド，配布資料，録音，文字起こし，参考文献 PDF，抽出画像，作業画像は，プロジェクト同期に必要な資料として原則 Git で追跡する。
+- `work/` の OCR，画像抽出，文字起こし，確認用メモなど，資料復元や本文確認に必要な作業資料も Git で追跡する。
+- GitHub の 100MB 制限，公開範囲，権利上の問題がある資料だけを個別例外として除外し，理由，代替ファイル，分割方針，保管場所を台帳に残す。`public/` に置く資料だけは公開可否を個別に確認する。
 
 ## ビルド
 
