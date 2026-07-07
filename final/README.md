@@ -9,7 +9,7 @@
 完成版は article 型の講義ノート体裁にし，大きな章見出しは使わない。
 最初の概要は `\recordintro{概要}` を使い，続く講義回や話題ブロックは `\section`，`\subsection` で整理する。
 完成 PDF 本文には，手書きページ番号，資料確認メモ，未確認ラベルを出さない。
-それらは `SESSION_INDEX.md`，`SOURCE_GAPS.md`，`CLAIM_REFERENCE_MAP.md` で管理する。
+それらは `WORK_LEDGER.md` で管理する。
 
 集中講義として使う場合は，必要に応じて次のように増やす。
 

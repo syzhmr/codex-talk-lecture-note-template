@@ -5,14 +5,14 @@
 
 ## 探す順序
 
-1. `HANDWRITTEN_REFERENCE_INDEX.md` で手書きノート由来の候補を確認する。
-2. `CLAIM_REFERENCE_MAP.md` で講義中の主張との対応状態を確認する。
-3. `LECTURE_REFERENCE_USAGE_AUDIT.md` で講義中に提示された参考文献の活用状況を確認する。
-4. `CODEX_REFERENCE_CANDIDATES.md` で Codex 提案候補かどうかを確認する。
+1. `WORK_LEDGER.md` で手書きノート由来の候補を確認する。
+2. `WORK_LEDGER.md` で講義中の主張との対応状態を確認する。
+3. `WORK_LEDGER.md` で講義中に提示された参考文献の活用状況を確認する。
+4. `WORK_LEDGER.md` で Codex 提案候補かどうかを確認する。
 5. `references/REFERENCE_INDEX.md` で文献の所在と確認状況を確認する。
 6. このディレクトリの個別メモを確認する。
 7. 必要な PDF または公開 URL を確認する。
-8. スキャン PDF または検索不能 PDF は画像化して確認する。短い PDF は全ページ，長い PDF は目次，索引，関連章を先に画像化し，画像ファイル名と確認箇所をメモと `LECTURE_REFERENCE_USAGE_AUDIT.md` に残す。
+8. スキャン PDF または検索不能 PDF は画像化して確認する。短い PDF は全ページ，長い PDF は目次，索引，関連章を先に画像化し，画像ファイル名と確認箇所をメモと `WORK_LEDGER.md` に残す。
 9. LMFDB (The L-functions and Modular Forms Database, https://www.lmfdb.org/) は，L 関数，modular 形式，楕円曲線，数体，$p$ 進体，Dirichlet 指標，Artin 表現，Galois 群，一般の群の具体例・不変量・標準的な記号の確認に使ってよい。使った場合は，導手，レベル，重さ，判別式，体次数，局所体の素数・次数，指標の法，群の位数などの検索条件，URL，確認した対象，不変量，講義中の主張との関係をメモに残す。
 
 ## 個別メモの推奨形式

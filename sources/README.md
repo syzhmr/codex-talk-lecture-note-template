@@ -15,8 +15,8 @@
 
 ## 運用
 
-- 資料の配置と役割は `PROJECT_PROFILE.md` と `SOURCE_INDEX.md` に記録する。
-- 講演・講義回との対応は `SESSION_INDEX.md` に記録する。
-- 手書きノート由来の参考文献候補は `HANDWRITTEN_REFERENCE_INDEX.md` に記録する。
-- 古いノートや旧版資料がある場合は，現行作業で使うかどうかを `SOURCE_INDEX.md` に明示する。
+- 資料の配置と役割は `PROJECT_PROFILE.md` と `WORK_LEDGER.md` に記録する。
+- 講演・講義回との対応は `WORK_LEDGER.md` に記録する。
+- 手書きノート由来の参考文献候補は `WORK_LEDGER.md` に記録する。
+- 古いノートや旧版資料がある場合は，現行作業で使うかどうかを `WORK_LEDGER.md` に明示する。
 - 文体・用語資料は数学的主張の根拠ではなく，日本語表現や訳語確認の補助資料として扱う。数学的主張の根拠として使う場合は，通常の参考文献と同じく `references/` に記録する。
