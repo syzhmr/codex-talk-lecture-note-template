@@ -42,7 +42,7 @@ scripts/ocr-reference-text.sh --lang jpn references/pdfs/example-japanese.pdf
 scripts/ocr-reference-text.sh --lang jpn+eng references/pdfs/example-mixed.pdf
 ```
 
-数式主体の英語 PDF は，LaTeX 直下に Nougat 補助スクリプトがある場合だけ `.mmd` も作る。
+数式主体の英語 PDF は，プロジェクト内に Nougat 補助スクリプトがある場合だけ `.mmd` も作る。
 
 ```sh
 ../tools/nougat/nougat-pdf-to-mmd.sh --out references/text references/pdfs/example.pdf

@@ -17,7 +17,7 @@
 - 講義中に参照された痕跡がある文献を優先する。
 - PDF を検索する前に，必要に応じて `scripts/extract-reference-text.sh` で `references/text/*.txt` を作る。
 - スキャン PDF でテキスト抽出が空に近い場合は，`scripts/ocr-reference-text.sh` で `references/text/*.ocr.txt` を作る。
-- 数式主体の英語 PDF は，LaTeX 直下に Nougat 補助スクリプトがある場合だけ `references/text/*.mmd` も作る。
+- 数式主体の英語 PDF は，プロジェクト内に Nougat 補助スクリプトがある場合だけ `references/text/*.mmd` も作る。
 - 参考文献 PDF の OCR と Nougat は検索補助であり，手書きノートには使わない。
 - スキャン PDF または検索不能 PDF は画像化して確認する。短い PDF は全ページ，長い PDF は目次，索引，関連章を先に画像化し，画像ファイル名，印刷ページ，節番号，定理番号，講義中の主張との対応を `notes/`，`REFERENCE_INDEX.md`，`WORK_LEDGER.md` の必要箇所に記録する。
 - LMFDB (The L-functions and Modular Forms Database, https://www.lmfdb.org/) は，L 関数，modular 形式，楕円曲線，数体，$p$ 進体，Dirichlet 指標，Artin 表現，Galois 群，一般の群の具体例・不変量・標準的な記号を確認する補助データベースとして使ってよい。使う場合は，検索条件，対象ページ URL，確認した対象，不変量，講義中の主張との関係を台帳化し，証明補完や講義由来文献の代替には使わない。
