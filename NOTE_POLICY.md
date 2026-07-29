@@ -5,12 +5,14 @@
 
 ## 入口
 
-1. 作業開始時は `WORKFLOW_STEPS.md` を読む。
+1. 作業開始時は`AGENTS.md`を読み，`WORKFLOW_STEPS.md`は該当節だけを読む。
 2. プロジェクト固有情報は `PROJECT_PROFILE.md` を確認する。
 3. 資料，話題ブロック，未解決点，記号修正，参考文献対応は `WORK_LEDGER.md` を確認する。
-4. 用語判断は `TERM_DICTIONARY.md` を優先する。
-5. LaTeX の構造や整形だけを触る場合は `LATEX_SOURCE_POLICY.md` を確認する。
-6. Git 操作は `GIT_WORKFLOW.md` に従う。
+4. 証明の復元，圧縮監査，手書き統合，gap map，loss auditは
+   `HANDWRITTEN_PROOF_POLICY.md`を確認する。
+5. 用語判断は `TERM_DICTIONARY.md` を優先する。
+6. LaTeX の構造や整形だけを触る場合は `LATEX_SOURCE_POLICY.md` を確認する。
+7. Git 操作は `GIT_WORKFLOW.md` に従う。
 
 ## 品質基準
 
@@ -22,6 +24,9 @@
 - 参考文献は，講義中の主張との対応，引用箇所，記号衝突，訳語候補，書誌情報の確認に使う。手書きノートにない証明や背景定理を本文へ補完するためには使わない。
 - 本文には「手書きノート p.X」「ノートでは」「記録」「未確認」などの作業用表現を出さない。未解決点は `WORK_LEDGER.md` に分離する。
 - 数学的に自然に見える補いでも，手書きノートにない主張，理由，証明範囲，接続文は本文へ足さない。
+- 本文または証明の内容変更では，本文案より先に簡潔な目標密度プロファイルと
+  gap mapを作る。詳細な証明復元表，deferred proof，loss auditの適用条件と
+  記録形式は`HANDWRITTEN_PROOF_POLICY.md`を正本とする。
 
 ## 完成版を 1 から作る方針
 

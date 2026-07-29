@@ -23,18 +23,29 @@ git clone git@github.com:syzhmr/codex-talk-lecture-note-template.git
 4. 板書写真，スライド，配布資料，開催情報があれば `sources/` 以下の対応ディレクトリに置く。
 5. 参考文献 PDF は `references/pdfs/` に置く。
 6. `WORK_LEDGER.md` の入力資料，セッション，話題ブロック，作業キューをプロジェクトに合わせて埋める。
-7. 最初の Codex 作業では次のように依頼する。
+7. 複数話題や方針変更にまたがる作業では，`PLANS.md` に従って
+   `work/plans/` に ExecPlan を作る。
+8. 最初の Codex 作業では次のように依頼する。
 
 ```text
-WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md，NOTE_POLICY.md，WORK_LEDGER.md，TERM_DICTIONARY.md を確認してから，手書きノートを入口にスモールステップで対象範囲を整理してください。
+AGENTS.md を入口として読み，WORKFLOW_STEPS.md の該当節，
+PROJECT_PROFILE.md，NOTE_POLICY.md，HANDWRITTEN_PROOF_POLICY.md，
+WORK_LEDGER.md，TERM_DICTIONARY.md を確認してから，手書きノートを入口に
+スモールステップで対象範囲を整理してください。
 ```
 
 ## フォルダ構成
 
-- `WORKFLOW_STEPS.md`: Codex が最初に読む再現可能な作業手順。
+- `AGENTS.md`: Codex が最初に読む短い入口と資料優先順位。
+- `WORKFLOW_STEPS.md`: 依頼型ごとの再現可能な詳細手順。
+- `PLANS.md`: 複数範囲・方針変更用の ExecPlan 形式。
 - `PROJECT_PROFILE.md`: 講義・講演ごとの設定。
 - `NOTE_POLICY.md`: 本文作成の品質基準とスモールステップ。
-- `WORK_LEDGER.md`: 資料台帳，講義回対応，進捗，未解決点，参考文献対応，記号修正をまとめる作業台帳。
+- `HANDWRITTEN_PROOF_POLICY.md`: 手書き証明の密度，gap map，復元表，
+  deferred proof，loss audit。
+- `WORK_LEDGER.md`: 資料台帳，講義回対応，進捗，手書き復元状態，未解決点，
+  参考文献対応，記号修正をまとめる作業台帳。
+- `RECORDS.md`: Git側の記録入口。
 - `TERM_DICTIONARY.md`: 採用語，不使用語，未承認候補，表記衝突を管理する用語辞書。
 - `LATEX_SOURCE_POLICY.md`: LaTeX ソースの構造・整形方針。
 - `GIT_WORKFLOW.md`: Git 運用方針。
@@ -45,14 +56,19 @@ WORKFLOW_STEPS.md を入口として読み，PROJECT_PROFILE.md，NOTE_POLICY.md
 - `references/`: 参考文献 PDF，検索用テキスト，参考文献台帳，読解メモ。
 - `scripts/`: 参考文献 PDF のテキスト抽出・OCR 用スクリプト。
 - `work/`: 画像抽出，文字起こし，確認用メモなどの作業場所。
+- `work/plans/`: 複数範囲・方針変更のExecPlan。
+- `work/records/`: 手書き復元監査などの恒久的な補助記録。
 
 ## 基本方針
 
 - 手書きノートを最優先資料にし，書かれている内容をすべて TeX 化することを基本作業にする。
 - 手書きノートは OCR にかけない。本文確定は単ページ画像または元 PDF の該当ページを目視して行う。
-- 作業開始時は `WORKFLOW_STEPS.md` 冒頭の「最短チェックリスト」で，作業型，読むファイル，作業キュー，次の Step を固定する。
+- 作業開始時は`AGENTS.md`を読み，`WORKFLOW_STEPS.md`冒頭の
+  「最短チェックリスト」で作業型，読むファイル，作業キュー，次のStepを固定する。
 - 本文整理は `NOTE_POLICY.md` のスモールステップに従い，小ステップを飛ばして完成扱いにしない。
-- 1 から本文を作る場合は，本文作成前に目標密度プロファイルを作り，図式，例，注意，Recall，証明，引用，脚注，三点リーダー，アスタリスク標識が落ちていないか loss audit する。
+- 本文・証明内容を変更する場合は，本文作成前に簡潔な目標密度プロファイルと
+  gap mapを作る。復元・統合・広い再生成・圧縮疑いでは詳細な証明復元表も作り，
+  反映後にloss auditする。
 - 全面改訂では，手書きノートの 1 ページ目から 1 ページずつ確認する。複数ページを並べた確認用画像だけを本文反映の根拠にしない。
 - 完成 PDF は，この PDF だけで読める講義ノートにする。本文中に「手書きノート p.X」「手書きノートでは」「記録として」「未確認」などの作業用ラベルを出さない。
 - 集中講義の日程，講義回，節題，話題ブロックの順序を保存し，教科書風の章構成へ勝手に組み替えない。

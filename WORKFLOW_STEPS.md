@@ -1,6 +1,6 @@
 # 再現可能作業手順
 
-このファイルを Codex 作業の入口にする。
+短い恒久入口は`AGENTS.md`とし，このファイルは依頼型ごとの詳細手順を持つ。
 目的は，毎回読む Markdown を減らしつつ，本文の品質判定を軽くしないことである。
 
 ## 最短チェックリスト
@@ -10,7 +10,8 @@
 1. `git status --short --branch` を確認し，未コミット変更を把握する。
 2. 依頼を「方針変更」「資料台帳更新」「手書きノート確認」「参考文献確認」「本文整理」「LaTeX 整形」「用語・記号確認」「Git 操作」に分類する。
 3. `PROJECT_PROFILE.md` でプロジェクト固有情報，`GIT_WORKFLOW.md` で Git 運用を確認する。
-4. 本文・数学内容に触る場合は `NOTE_POLICY.md` と `WORK_LEDGER.md` を読む。
+4. 本文・数学内容に触る場合は`NOTE_POLICY.md`と`WORK_LEDGER.md`を読む。
+   証明の復元・圧縮監査・手書き統合では`HANDWRITTEN_PROOF_POLICY.md`も読む。
 5. `WORK_LEDGER.md` の「作業キュー」と「スモールステップ進捗」で対象ブロックと次の Step を固定する。
 6. 手書きノート，板書写真，手書きメモは OCR にかけず，単ページ画像または元 PDF を目視する。
 7. 手書き資料の見出し，式，図式，Recall，例，注意，証明，欄外注，レポート問題を圧縮しない。
@@ -34,21 +35,21 @@
 4. 未コミット変更がある場合は，変更元と作業範囲を確認し，無関係な変更を壊さない。
 5. ユーザーが `sources/` または `references/` に入れた資料は，未登録なら `WORK_LEDGER.md` または `references/REFERENCE_INDEX.md` に登録してから使う。
 
-## 1. 常に読む
+## 1. 最小入口
 
-1. `WORKFLOW_STEPS.md`
-2. `PROJECT_PROFILE.md`
-3. `GIT_WORKFLOW.md`
+1. `AGENTS.md`
+2. `WORKFLOW_STEPS.md`の該当節
+3. `PROJECT_PROFILE.md`
 
 ## 2. 作業型ごとの読むファイル
 
 | 作業型 | 読むファイル |
 | --- | --- |
-| 方針変更 | `README.md`, `PROJECT_PROFILE.md`, `NOTE_POLICY.md`, `WORKFLOW_STEPS.md`, `WORK_LEDGER.md`, `TERM_DICTIONARY.md`, `LATEX_SOURCE_POLICY.md`, `GIT_WORKFLOW.md`, `references/README.md` |
+| 方針変更 | `README.md`, `AGENTS.md`, `PROJECT_PROFILE.md`, `NOTE_POLICY.md`, `HANDWRITTEN_PROOF_POLICY.md`, `WORKFLOW_STEPS.md`, `WORK_LEDGER.md`, `TERM_DICTIONARY.md`, `LATEX_SOURCE_POLICY.md`, `GIT_WORKFLOW.md`, `references/README.md` |
 | 資料台帳更新 | `PROJECT_PROFILE.md`, `WORK_LEDGER.md`, `sources/README.md`, `references/README.md`, `references/REFERENCE_INDEX.md` |
-| 手書きノート確認 | `NOTE_POLICY.md`, `WORK_LEDGER.md`, 対象の手書きノートまたは単ページ画像 |
+| 手書きノート確認 | `NOTE_POLICY.md`, `HANDWRITTEN_PROOF_POLICY.md`, `WORK_LEDGER.md`, 対象の手書きノートまたは単ページ画像 |
 | 参考文献確認 | `NOTE_POLICY.md`, `WORK_LEDGER.md`, `references/README.md`, `references/REFERENCE_INDEX.md`, 必要な `references/notes/` の個別メモ |
-| 本文整理 | `NOTE_POLICY.md`, `WORK_LEDGER.md`, `TERM_DICTIONARY.md`, 対象 TeX |
+| 本文整理 | `NOTE_POLICY.md`, `HANDWRITTEN_PROOF_POLICY.md`, `WORK_LEDGER.md`, `TERM_DICTIONARY.md`, 対象 TeX |
 | LaTeX 整形 | `LATEX_SOURCE_POLICY.md`, 対象 TeX。意味変更の可能性がある場合は `NOTE_POLICY.md` も読む。 |
 | 用語・記号確認 | `TERM_DICTIONARY.md`, `NOTE_POLICY.md`, `WORK_LEDGER.md` |
 | Git 操作 | `GIT_WORKFLOW.md` |
@@ -59,12 +60,16 @@
 2. 対象ページ，対象資料，反映先 TeX，ロック済み範囲，未解決点を短く列挙する。
 3. 手書きノートを OCR にかけず，1 ページずつ確認する。contact sheet だけを根拠にしない。
 4. 見出し，小見出し，定義・確認/Recall・注意・例・定理・命題，本文，式，図式，矢印，欄外メモ，レポート問題，証明または sketch を抽出する。
-5. 参考文献候補，記号衝突，判読不能箇所を `WORK_LEDGER.md` に分ける。
-6. 本文へ反映する。手書きノートにない証明補完や接続文は入れない。
-7. loss audit を行い，手書き資料にあった環境，図式，証明，脚注，引用，三点リーダー，アスタリスク標識が落ちていないか確認する。
-8. 作業用表現が本文へ残っていないか確認する。
-9. 本文を修正した場合は原則としてビルドする。
-10. `WORK_LEDGER.md` の状態を更新し，完成扱いにできない理由を残す。
+5. 本文案より先に，簡潔な目標密度プロファイルとobligation単位のgap mapを
+   `WORK_LEDGER.md`またはリンクした詳細記録へ残す。復元・統合・広い再生成・
+   圧縮疑いでは詳細な証明復元表も作る。
+6. 参考文献候補，記号衝突，判読不能箇所を`WORK_LEDGER.md`に分ける。
+7. 本文へ反映する。手書きノートにない証明補完や接続文は入れない。
+8. 目標密度プロファイル，gap map，必要なら証明復元表に対してloss auditを行う。
+9. source-aware reviewと完成原稿だけを読むinternal reader reviewを分けて行う。
+10. 作業用表現を確認し，本文を修正した場合は原則としてビルドする。
+11. `WORK_LEDGER.md`へopen obligation，open deferred proof，完成扱いに
+    できない理由を残す。
 
 ## 3A. 1 から完成版を作る手順
 
@@ -97,6 +102,9 @@
 6. ロック済み範囲を勝手に変更していない。
 7. 必要なビルドまたは検査を実行している。
 8. 1 から作った範囲では，目標密度プロファイルと loss audit が残っている。
+9. 本文・証明内容を変更した範囲では，適用条件に応じたgap map，証明復元表，
+   deferred proof registerが残り，open項目がない。
+10. source-aware reviewとinternal reader reviewの両方を終えている。
 
 ## 5. 停止条件
 
