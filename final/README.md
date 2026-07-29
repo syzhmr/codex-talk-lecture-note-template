@@ -4,7 +4,7 @@
 
 - `talk01.tex`: 集中講義の親ファイル。必要に応じて `day01.tex` などへ分ける。
 - `talk01/01-overview.tex`: 話題ブロック単位の本文ファイル。
-- `references.tex`: 完成 PDF 末尾の参考文献欄。
+- `references.tex`: 最後の板書または本文の直後に，強制改ページを挟まず続ける参考文献欄。
 
 完成版は article 型の講義ノート体裁にし，大きな章見出しは使わない。
 最初の概要は `\recordintro{概要}` を使い，続く講義回や話題ブロックは `\section`，`\subsection` で整理する。
