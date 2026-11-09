@@ -69,4 +69,8 @@ argument.
 - Before reporting, inspect `git diff --check`, the focused diff, and final
   status. Report what was not verified.
 
-Do not install dependencies, commit, push, or rewrite history unless requested.
+Do not install dependencies or rewrite history unless requested.
+For commit and push, honor the user's applicable standing authorization as
+well as explicit requests; do not ask again when already authorized. Follow
+`GIT_WORKFLOW.md`, preserve unrelated changes and publication restrictions,
+and report verification, commit, and push results or the reason for stopping.
